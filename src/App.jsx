@@ -1,9 +1,7 @@
-
-
 function App() {
   return (
     <div className="App">
-      hello
+      <h1 className="text-primary">Hello world</h1>
     </div>
   );
 }
