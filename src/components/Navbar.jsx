@@ -27,7 +27,20 @@ const Navbar = () => {
       </div>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
-        <img src={toggle ? close : menu} />
+        <img src={toggle ? close : menu} className="w-[35px] h-[35px]" onClick={() => setToggle ((prev)=> !prev)} />
+
+
+          <div className={`${toggle ? 'flex' : 'hidden'}`}>
+          <ul className="list-none ">
+          {navlinks.map((link)=>(
+            <li key={link.id} className="font-space text-[16px] font-medium cursor-pointer text-grey mr-10">
+              <a href={`#${link.id}`}>
+                {link.title}
+              </a>
+            </li>
+         ))}
+      </ul>
+          </div>
       </div>
     </nav>
   )
