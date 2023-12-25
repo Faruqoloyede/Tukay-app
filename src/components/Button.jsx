@@ -1,10 +1,10 @@
-import React from 'react'
 
-const Button = () => {
+const Button = (props, index) => {
+  const label = props.label ?? "get started"
+  const styles = props.styles ?? ""
+
   return (
-    <div>
-      
-    </div>
+    <button style={{color: props.color}} className={`py-2 px-6 font-medium font-poppins text-[18px] rounded-[10px] ${styles} btn ${index == Button.length -1 ? "mr-0" : "mr-10"}`}>{label}</button>
   )
 }
 

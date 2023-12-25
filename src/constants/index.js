@@ -4,19 +4,19 @@ import bro from "../assets/bro.png";
 export const navlinks = [
     {
         id: "home",
-        title: "HOME"
+        title: "Home"
     },
     {
         id: "service",
-        title: "SERVICE"
+        title: "Service"
     },
     {
         id: "feature",
-        title: "FEATURES"
+        title: "Features"
     },
     {
         id: "contact",
-        title: "CONTACT"
+        title: "Contact"
     },
 ]
 
