@@ -12,7 +12,14 @@ function App() {
       <div className={`${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Main />
+          <Features />
         </div>
+      </div>
+      <div className={`${styles.flexStart} ${styles.boxWidth}`}>
+        <Getstarted />
+      </div>
+      <div className={`${styles.flexStart} ${styles.boxWidth} ${styles.paddingX}`}>
+        <Testimonial />
       </div>
     </div>
   );
