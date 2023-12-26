@@ -27,20 +27,25 @@ const Navbar = () => {
       </div>
 
       <div className="sm:hidden flex flex-1 justify-end items-center">
-        <img src={toggle ? close : menu} className="w-[35px] h-[35px]" onClick={() => setToggle ((prev)=> !prev)} />
+        <img src={menu} className="w-[35px] h-[35px]" onClick={()=>setToggle(true)} />
 
 
-          <div className={`${toggle ? 'flex' : 'hidden'}`}>
-          <ul className="list-none ">
-          {navlinks.map((link)=>(
-            <li key={link.id} className="font-space text-[16px] font-medium cursor-pointer text-grey mr-10">
-              <a href={`#${link.id}`}>
-                {link.title}
-              </a>
-            </li>
-         ))}
-      </ul>
+        <div className={`${toggle ? 'top-0' : 'hidden'} flex flex-col items-center absolute -top-[100% bg-secondary w-[100%] right-0 p-6 sidebar`}>
+          <img src={close} className="w-[35px] h-[35px] absolute right-5" onClick={()=>setToggle(false)}  />
+          <ul className="list-none flex flex-col justify-center items-center flex-1">
+            {navlinks.map((link)=>(
+              <li key={link.id} className="font-space text-[18px] font-semibold cursor-pointer text-grey mr-10 m-4">
+                <a href={`#${link.id}`}>
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="flex flex-col">
+            <Button label="Login" styles="bg-primary" color= "white" />
+            <Button label="Sign up" color="#00545F" />
           </div>
+        </div>
       </div>
     </nav>
   )
